@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GamesOnRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+    <h1>Mens Tennis World Ranking Database</h1>
+
+      <header>
+        <nav>
+          <a href="<%= players_path %>">Index</a>
+          |
+          <a href="<%= players_new_path %>">Create Player</a>
+        </nav>
+
+
+      </header>
+
+      <hr>
+
+        <%= yield %>
+
+      <hr>
+      &copy; Jamie McNeill 2020
+
+  </body>
+</html>

@@ -7,7 +7,7 @@ class SecretnumController < ApplicationController  #inherits from ApplicationCon
   def answer
 
     #links to views.erb template file with the same name.
-    @secret_number = 8
+    @secret_number = rand(1..10)
 
     @guess = params[:guess].to_i
 
@@ -16,6 +16,9 @@ class SecretnumController < ApplicationController  #inherits from ApplicationCon
     else
       @result = "Guess again"
     end
+
+    #ternary operator
+    @result = @secret_number == @guess ? "You guessed correctly" : "Guess again"
 
   end
 

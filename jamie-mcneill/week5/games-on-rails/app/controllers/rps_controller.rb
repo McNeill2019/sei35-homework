@@ -14,7 +14,7 @@ class RpsController < ApplicationController  #inherits from ApplicationControlle
     #   @result = "Computer Wins!"
     # end
 
-    #bonus
+    #My answer
     if @users_choice == "rock" && @computer_choice == "scissors"
       @result = "You Win!!"
     elsif @users_choice == "rock" && @computer_choice == "paper"
@@ -33,5 +33,47 @@ class RpsController < ApplicationController  #inherits from ApplicationControlle
 
   end
 
+# Jordans Example:
+  #
+  # @users_weapon = params[:throw]
+  #
+  # outcome = ["rock","paper","scissors"]
+  #
+  # @comp_weapon = outcome[rand(3).floor]
+  #
+  # win_combos =[
+  #     ['rock', 'scissors'],
+  #     ['paper', 'rock'],
+  #     ['scissors', 'paper']
+  #   ]
+  #   @result = ''
+  #   win_combos.each do | el |
+  #     if @comp_weapon == el[0] && @users_weapon == el[1]
+  #       @result = 'Comp Wins'
+  #     elsif @comp_weapon == @users_weapon
+  #       @result = 'Draw'
+  #     else
+  #       @result = 'User Wins'
+  #     end
+  #   end
+
+#Lawrences Answer
+
+#   class RpsController < ApplicationController
+#
+# def player_choice
+#    end
+#     def play_game
+#         rules = {
+#             "rock" => {"rock" => "draw", "paper" => "loss", "scissors" => "win"},
+#             "scissors" => {"rock" => "loss", "paper" => "win", "scissors" => "draw"},
+#             "paper" => {"rock" => "win", "paper" => "draw", "scissors" => "loss"}
+#         }
+#         cpu_choices = ["rock","paper","scissors"]
+#         @cpu_choice = cpu_choices.sample
+#         @user_choice = params[:throw]
+#         @result = rules[@user_choice][@cpu_choice]
+#     end
+# end
 
 end

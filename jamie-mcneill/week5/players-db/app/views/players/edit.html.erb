@@ -1,0 +1,30 @@
+<h2>Edit Player <%= @player.name %></h2>
+
+# action is '/planets' but we're using the path helper for this
+<form action=" <%= player_path(@player.id) %>" method="post">
+
+  <label>
+    Name: <input type="text" name="name" value= "<%= @player.name %>">
+  </label><br>
+  <label>
+    World_ranking: <input type="text" name="world_ranking" value= "<%= @player.world_ranking %>">
+  </label><br>
+  <label>
+    Age: <input type="text" name="age" value= "<%= @player.age %>">
+  </label><br>
+  <label>
+    Country: <input type="text" name="country" value= "<%= @player.country %>">
+  </label><br>
+  <label>
+    Prize Money: <input type="text" name="prize_money" value= "<%= @player.prize_money %>">
+  </label><br>
+  <label>
+    Titles: <input type="text" name="titles" value= "<%= @player.titles %>">
+  </label><br>
+  <label>
+    Image URL: <input type="text" name="image" value= "<%= @player.image %>">
+  </label><br>
+
+  <input type="submit" value="Edit" value= "Update">
+
+</form>

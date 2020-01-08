@@ -1,0 +1,41 @@
+<h2>
+  Player: <%= @player.name %>
+</h2>
+
+<a href=" <%= player_edit_path(@player.id) %>">Edit</a>
+|
+<a href=" <%= player_destroy_path(@player.id) %>">Delete</a>
+
+<p>
+<strong>World Ranking:</strong>
+<%= @player.world_ranking %>
+</p>
+
+<p>
+<strong>Name: </strong>
+<%= @player.name %>
+</p>
+
+<p>
+<strong>Age:</strong>
+<%= @player.age %>
+</p>
+
+<p>
+<strong>Country:</strong>
+<%= @player.country %>
+</p>
+
+<p>
+<strong>Prize Money:</strong>
+$<%= @player.prize_money %>
+</p>
+
+<p>
+<strong>Titles:</strong>
+<%= @player.titles %>
+</p>
+
+<% if @player.image.present?  %>
+<%= image_tag @player.image, alt: @player.name, class:'player' %>
+<% end %>
